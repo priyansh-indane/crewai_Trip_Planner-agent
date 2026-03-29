@@ -26,7 +26,7 @@ class MyCustomTool(BaseTool):
     def _run(self, body: str) -> str:
         sender = "lakesun552@gmail.com"
         receiver = "indanepriyansh@gmail.com"
-        password = "xryiffmslizzdfom"
+        password = "give password"
 
         msg = MIMEMultipart()
         msg["From"] = sender
