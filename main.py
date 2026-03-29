@@ -33,11 +33,11 @@ writer=Agent(
     backstory="highly experienced skilled in giving well planned trips.Give a short summary.",
     verbose=True,
     llm=llm,
-    tools=[email_tool]  # ✅ added email tool to writer
+    tools=[email_tool]  
 )
 
 task1 = Task(
-    description="Find hotels , resorts , and places to stay in {city} for {travelers}.",  # ✅ removed {topic}
+    description="Find hotels , resorts , and places to stay in {city} for {travelers}.",  
     expected_output="Give names of hotels to stay"
                     "give summary in one short and concise paragraph( give bullet points)",
     agent=researcher,
