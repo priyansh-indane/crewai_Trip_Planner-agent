@@ -4,7 +4,7 @@ load_dotenv()
 from crewai import LLM, Agent, Task, Crew  
 from email_tool import MyCustomTool
 
-email_tool = MyCustomTool()  # ✅ instantiate tool once
+email_tool = MyCustomTool()  
 
 llm=LLM(
     model="gpt-4o-mini",
