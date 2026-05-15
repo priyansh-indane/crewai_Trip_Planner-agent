@@ -10,4 +10,4 @@ Agentic AI trip planner using CrewAI to coordinate specialized agents for destin
 - ✍️ **Writer Agent** - Writes a concise, well-planned trip guide
 - 📧 **Email Tool** - Automatically sends the final trip plan to your email
 
-## Project Structure
+
