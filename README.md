@@ -8,6 +8,6 @@ Agentic AI trip planner using CrewAI to coordinate specialized agents for destin
 - 🔍 **Researcher Agent** - Finds best hotels, resorts, and places to stay
 - 📅 **Optimizer Agent** - Creates day-wise planner with budget-friendly routes and costs
 - ✍️ **Writer Agent** - Writes a concise, well-planned trip guide
-- 📧 **Email Tool** - Automatically sends the final trip plan to your email
+- 📧 **Email Tool** - Automatically sends the final trip plan to your email.
 
 
