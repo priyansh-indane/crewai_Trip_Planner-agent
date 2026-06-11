@@ -11,6 +11,7 @@ llm=LLM(
     temperature=0.1
 )
 
+#Researcher Agent 
 researcher= Agent(
     role="researcher agent",
     goal="analyze trips and give best planning for the trip.",
@@ -19,6 +20,7 @@ researcher= Agent(
     llm=llm
 )
 
+#Optimizer Agent
 optimizer= Agent(
     role="optimizer agent",
     goal="analyze trips and give best planning for the trip.",
@@ -27,6 +29,7 @@ optimizer= Agent(
     llm=llm
 )
 
+#Writter Agent
 writer=Agent(
     role="writer agent, Give planning, schedules and costing required.",
     goal="write costing , weather , requirements for trip etc for the trip.",
@@ -36,6 +39,7 @@ writer=Agent(
     tools=[email_tool]  
 )
 
+#Researcher Agent Task.
 task1 = Task(
     description="Find hotels , resorts , and places to stay in {city} for {travelers}.",  
     expected_output="Give names of hotels to stay"
@@ -43,6 +47,7 @@ task1 = Task(
     agent=researcher,
 )
 
+#Optimizer Agent Task
 task2 = Task(
     description="find best budget friendly places to stay , and give day wise planner to visit places and give efficient routes and costs.",
     expected_output="summary for planning trips."
@@ -51,6 +56,7 @@ task2 = Task(
     context=[task1],
 )
 
+#Writer Agent Task
 task3 = Task(
     description="write well planned/short and concise guide to visit {city} for {travelers} starting {start_date}. Special requirements: {special_requirements}. After writing, use the email sender tool to send the complete trip plan.",  # ✅ removed {topic}, added email instruction
     expected_output="summary for planning trips in a short and concise way."
@@ -60,6 +66,7 @@ task3 = Task(
     context=[task2],
 )
 
+#initialize crew
 crew= Crew(
     agents=[researcher,optimizer,writer],
     tasks=[task1,task2,task3],
